@@ -1,0 +1,16 @@
+--To run the project first extract the files in your disered directory
+--Then extract the sub folders i.e. in the same directory
+--open terminal 
+--make sure you have a network connection (initial run only)
+--open CMD
+--run the command 
+---For Server Side
+--npm i --(first time only)
+--nodemon {yourCurrent directory here}/project/employeeManagement/src/index
+---For Client Side
+--open a seperate CMD window
+--run the command
+--npm i --(first time only)
+--cd {yourCurrent directory here}/project/secondapp
+--npm start
+--project should open

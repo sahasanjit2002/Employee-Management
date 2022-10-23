@@ -1,0 +1,26 @@
+{
+  "name": "employeemanagement",
+  "version": "1.0.0",
+  "description": "This is project about managing employees",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "author": "Sanjit Saha, Akash Sarkar",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
+    "tabulator-tables": "^5.2.7",
+    "validator": "^13.7.0"
+  }
+}

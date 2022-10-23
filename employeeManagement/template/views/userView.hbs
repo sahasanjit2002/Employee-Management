@@ -1,0 +1,115 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'nunito';
+        }
+        table{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1200px;
+            border: none;
+            transform: translate(-50%,-50%);
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            min-height: 70px;
+            border-radius: 15px 15px 0 0 ;
+            font-size:medium;
+            text-align: center;
+        }
+        thead{
+            border:none;
+            background-color: #6c79e0;
+            color: white;
+            border-collapse: collapse;
+            padding: 10px;
+            border-radius: 10px;
+            border-spacing: 0;
+        }
+        th{
+            padding: 10px;
+        }
+        th:nth-child(1)
+        {
+
+        }
+        tbody tr{
+            transition: 0.2s ease-in-out;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        tbody tr:nth-child(even){
+            background-color: #FFFFFF;
+        }
+        tbody tr:nth-child(odd){
+            background-color: #F8F7FE;
+        }
+        tbody tr:hover{
+            transform: scale(1.05);
+        }
+        tbody tr td{
+            padding: 15px;
+        }
+        tbody tr td a{
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    hello there
+    <table id="example-table" cellspacing="0" cellpadding="0">
+        <thead>
+            <th data-column="id" data-order="desc">ID &#9650</th>
+            <th data-column="name" data-order="desc">Name &#9650</th>
+            <th data-column="Username" data-order="desc">Username &#9650</th>
+            <th data-column="Experience" data-order="desc">Experience &#9650</th>
+            <th data-column="Email" data-order="desc">Email &#9650</th>
+            <th data-column="Delete" data-order="desc">delete &#9650</th>
+            <th data-column="Assign" data-order="desc">Assign &#9650</th>
+        </thead>
+        <tbody id="tableDat"></tbody>
+    </table>
+    <script>
+        var names = []
+        fetch('/getUsers').then((data)=>{
+            return data.json()
+        }).then((objData)=>{
+            console.log(objData);
+            generateTable(objData)
+        })
+        $('th').on('click',()=>{
+            console.log()
+
+            // to be developed further
+        });
+        console.log("After data")
+        function generateTable(tdata){
+            var table = document.getElementById("tableDat")
+            table.innerHTML = ''
+            console.log(tdata);
+            for(let i=0;i<tdata.length;i++){
+                var row=`
+                <tr>
+                    <td>${tdata[i]._id}</td>
+                    <td>${tdata[i].name}</td>
+                    <td>${tdata[i].username}</td>
+                    <td>${tdata[i].experience}</td>
+                    <td>${tdata[i].email}</td>
+                    <td><a onclick="alert('${tdata[i]._id} is deleted')">Delete</a></td>
+                    <td><a onclick="alert('${tdata[i]._id} is assigned')">Assign</a></td>
+                    </tr>
+                        `
+                table.innerHTML += row;
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family:'nunito';
+        }
+        .master{
+            position: absolute;
+            font-size: 1.2em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: grid;
+            width: 750px;
+            grid-template-columns: 50% 50%;
+            grid-gap: 20px ;
+        }
+        .master div{
+            display: grid;
+            grid-template-columns: 35% 65%;
+            color: #0F9D58;
+            font-weight: 500;
+        }
+        .master div label{
+            color: #de5246;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="master">
+        <div><label>Name</label> :{{currentP.name}}</div>
+        <div><label>Username</label>:{{currentP.username}}</div>
+        <div><label>Email</label> :{{currentP.email}}</div>
+        <div><label>Phone</label>  :{{currentP.phone}}</div>
+        <div><label>Address</label> :{{currentP.address}}</div>
+        <div><label>Department</label>:{{currentP.department}}</div>
+        <div><label>Position</label><div id="pos">:{{position}}</div></div>
+        <div id="createProject"></div>
+        <script>
+            var post =document.getElementById("pos").innerText.substring(1);
+            if(post === "mng")
+            {
+                var lin = document.getElementById("createProject")
+                lin.innerHTML += `<a href="/project">Assign Project</a>`
+            }
+            console.log(post);
+            
+        </script>
+    </div>
+</body>
+</html>

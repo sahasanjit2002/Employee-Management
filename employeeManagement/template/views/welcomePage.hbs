@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "nunito";
+        }
+        h1{
+            position: absolute;
+            font-size: 2em;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #profile{
+            position: absolute;
+            font-size: 1.2em;
+            text-decoration: none;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Welcome {{name}}
+    </h1>
+    <a href="/viewProfile" id="profile">View Your Profile</a>
+    <a href="/">home</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.titleHeading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 30px;
+    color:white
+}
+.line{
+    width: 800px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    position: relative;
+    left:50%;
+    transform:translateX(-50%);
+}
+.profileDisplay{
+    display: grid;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    align-content: center;
+    color:white
+}
+.innerProfileDisplay{
+    font-size: larger;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 5px;
+    color: white;
+}
+#background{
+    background-color: rgba(3, 3, 3, 0.254);
+    width: 1000px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+
+}
+button{
+    color: rgb(0, 0, 0);
+}
+input{
+    color: black;
+}

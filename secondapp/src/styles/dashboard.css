@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+    background-color: #4A148C;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color:white;
+    list-style-type:none;
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+}
+.dash{
+    height:100%;
+    width: 150px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+#logOut{
+    height: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.dash:hover{
+    background-color: rgba(255, 255, 255, 0.419);
+}

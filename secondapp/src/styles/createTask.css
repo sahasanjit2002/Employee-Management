@@ -1,0 +1,22 @@
+#createTask{
+    position: relative;
+    width: 600px;
+    left:50%;
+    transform: translate(-50%);
+    margin: 30px;
+}
+#createTask-inner{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#createTask-inner input{
+    height: 30px;
+}
+#empData{
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+}
+#taskData{
+    font-weight: 900;
+}

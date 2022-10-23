@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: "nunito";
+        }
+        form{
+            position: absolute;
+            width: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-gap:20px;
+        }
+        form input{
+            height: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Emp Register</h1>
+    <form action="/empUser" method="POST">
+    {{> formInput}}
+    </form>
+</body>
+</html>

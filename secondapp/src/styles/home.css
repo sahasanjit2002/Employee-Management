@@ -1,0 +1,56 @@
+*{
+    font-family: "nunito";
+    color: white;
+}
+body{
+    margin: 0;
+    padding:0;
+    background: url("./1836571.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.home{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    z-index: 1;
+    /*color: #6A1B9A;*/
+    color:white;
+    font-weight: 700;
+    align-content: center;
+}
+a{
+    padding-left: 20px;
+    text-decoration: none;
+    color:white
+}
+#intro{
+    height: 100vh;
+}
+p#emp {
+    font-size: 40px;
+    font-weight: 800;
+    /*color: #C2185B;*/
+    color:white;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translate(-10%,-50%);
+    width: 30px;
+}
+#two{
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.092);
+    filter: blur(10px);
+}
+#whyUS{
+    position: relative;
+    top: 5%;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+
+}
